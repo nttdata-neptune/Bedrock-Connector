@@ -1,0 +1,70 @@
+{
+	"id": "f250d4c6-f039-ef11-86c3-000d3add2e37",
+	"createdAt": "2024-07-04T10:32:57.256Z",
+	"createdBy": "nagarjuna.thallam",
+	"git": {
+		"remote": "https://github.com/nttdata-neptune/Bedrock-Connector"
+	},
+	"name": "AWS Bedrock Connector",
+	"description": "Connection between AWS Bedrock and Neptune",
+	"ver": "24.07.04.1051",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "44482479-abef-4288-f808-b67660e3a006",
+			"application": "aws_bedrock_demo_app",
+			"title": "",
+			"description": "",
+			"package": {
+				"id": "F250D4C6-F039-EF11-86C3-000D3ADD2E37"
+			}
+		}
+	],
+	"api": [
+		{
+			"id": "56e69790-f239-ef11-86c3-000d3add2e37",
+			"name": "AWS_Bedrock_Connector_API",
+			"description": null,
+			"apiGroup": null
+		}
+	],
+	"odataSource": [],
+	"odataMock": [],
+	"dictionary": [],
+	"jsclass": [
+		{
+			"id": "14a3fffb-f039-ef11-86c3-000d3add2e37",
+			"name": "AWS_Bedrock_Connector_Script",
+			"description": "Script to connect Neptune with AWS Bedrock"
+		}
+	],
+	"jsscript_group": [
+		{
+			"id": "aa0283e1-f039-ef11-86c3-000d3add2e37",
+			"name": "AWS_Bedrock_Connector",
+			"description": ""
+		}
+	],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"department": [],
+	"script_scheduler": [],
+	"wf_definition": [],
+	"connector": [],
+	"events": [],
+	"code_snippets": [],
+	"wf_determination": [],
+	"wf_taskaction": []
+}
