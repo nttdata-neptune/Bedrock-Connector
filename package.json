@@ -1,7 +1,7 @@
 {
-    "name": "AWSBedrockConnector",
+    "name": "bedrock-2.0",
     "version": "1.0.0",
-    "description": "Connection between AWS Bedrock and Neptune",
+    "description": "bedrock-2.0",
     "author": "Neptune Software",
     "license": "LicenseRef-LICENSE",
     "private": true,
@@ -21,7 +21,7 @@
         "ts-jest": "^29.0.3"
     },
     "dependencies": {
-        "@aws-sdk/client-bedrock": "3.609.0",
-        "@aws-sdk/client-bedrock-runtime": "3.609.0"
+        "@aws-sdk/client-bedrock": "3.600.0",
+        "@aws-sdk/client-bedrock-runtime": "3.602.0"
     }
 }

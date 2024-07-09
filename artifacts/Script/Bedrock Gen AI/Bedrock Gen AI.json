@@ -1,0 +1,34 @@
+{
+	"id": "8945b059-7ae0-4efc-8e8c-b665a09e5762",
+	"createdAt": "2024-06-25T10:44:32.000Z",
+	"createdBy": "admin",
+	"globalScripts": [],
+	"externalModules": [
+		{
+			"id": "9b10d0ce-9674-4bab-a39b-84d836c02424",
+			"name": "@aws-sdk/client-bedrock",
+			"contextname": "awssdkclientbedrock",
+			"path": "C:\\Neptune\\planet9-win-v23.10.3\\nodeModules/node_modules/@aws-sdk/client-bedrock"
+		},
+		{
+			"id": "ce279356-48ff-4b4a-aad0-7834c86fa730",
+			"name": "@aws-sdk/client-bedrock-runtime",
+			"contextname": "awssdkclientbedrockruntime",
+			"path": "C:\\Neptune\\planet9-win-v23.10.3\\nodeModules/node_modules/@aws-sdk/client-bedrock-runtime"
+		}
+	],
+	"entitySets": [],
+	"apis": [],
+	"name": "Bedrock Gen AI",
+	"ver": "24.07.09.1838",
+	"description": null,
+	"folder": "",
+	"content": "file:///content.ts",
+	"useAsGlobalScript": false,
+	"transpiledContent": "file:///transpiledContent.ts",
+	"lastRunSuccessful": true,
+	"isTypescript": false,
+	"language": "typescript",
+	"jsscriptGroup": "31878e60-08ae-4b81-9bbc-4a0d3818e3ba",
+	"package": "01e71355-b382-434d-8296-105dc3824ca8"
+}

@@ -1,0 +1,126 @@
+{
+	"id": "433f6f0a-3a99-484b-99d4-24d7d23e33de",
+	"createdAt": "2024-06-27T07:39:24.000Z",
+	"createdBy": "admin",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "78a4c6b9-0ed5-4bfb-fdca-f60e75d2449c",
+			"method": "POST",
+			"path": "/getResponseFromBedrock",
+			"description": "",
+			"parameters": [
+				{
+					"name": "inputValue",
+					"description": "",
+					"required": true,
+					"inPath": false,
+					"value": "",
+					"default": "",
+					"example": ""
+				},
+				{
+					"name": "playground",
+					"description": "",
+					"required": true,
+					"inPath": false,
+					"value": "",
+					"default": "",
+					"example": ""
+				},
+				{
+					"name": "accessKey",
+					"description": "",
+					"required": true,
+					"inPath": false,
+					"value": "",
+					"default": "",
+					"example": ""
+				},
+				{
+					"name": "secretKey",
+					"description": "",
+					"required": true,
+					"inPath": false,
+					"value": "",
+					"default": "",
+					"example": ""
+				},
+				{
+					"name": "modelId",
+					"description": "",
+					"required": true,
+					"inPath": false,
+					"value": "",
+					"default": "",
+					"example": ""
+				},
+				{
+					"name": "modelProvider",
+					"description": "",
+					"required": true,
+					"inPath": false,
+					"value": "",
+					"default": "",
+					"example": ""
+				}
+			],
+			"headers": [],
+			"responses": [
+				{
+					"id": "1969da2b-bce7-4767-9814-60d622d23578",
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"content": [
+						{
+							"id": "17fb45b1-2e58-4b73-b6ee-121b800aa0f2",
+							"name": "storeResponse",
+							"objectType": "reference"
+						}
+					]
+				}
+			],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "8945b059-7ae0-4efc-8e8c-b665a09e5762"
+		}
+	],
+	"definitions": [
+		{
+			"id": "db6f874d-2467-4a6f-c1da-7d2bc2351308",
+			"name": "storeResponse",
+			"description": "",
+			"isInclude": false,
+			"properties": [],
+			"type": "object"
+		}
+	],
+	"documentation": [],
+	"name": "Bedrock_API",
+	"endpoint": "/api/serverscript/bedrock_api",
+	"ver": "24.07.09.1904",
+	"version": null,
+	"description": null,
+	"mediaType": null,
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "script",
+	"about": null,
+	"enableProxy": false,
+	"forwardProxy": null,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": true,
+	"useOwnProcess": false,
+	"package": "01e71355-b382-434d-8296-105dc3824ca8",
+	"apiGroup": null,
+	"apiFormat": 1,
+	"roles": []
+}

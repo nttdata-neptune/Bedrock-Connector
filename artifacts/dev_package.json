@@ -1,29 +1,29 @@
 {
-	"id": "f250d4c6-f039-ef11-86c3-000d3add2e37",
-	"createdAt": "2024-07-04T10:32:57.256Z",
-	"createdBy": "nagarjuna.thallam",
+	"id": "01e71355-b382-434d-8296-105dc3824ca8",
+	"createdAt": "2024-07-09T13:30:32.000Z",
+	"createdBy": "admin",
 	"git": {
-		"remote": "https://github.com/nttdata-neptune/Bedrock-Connector"
+		"remote": "https://github.com/nttdata-neptune/Bedrock-Connector.git"
 	},
-	"name": "AWS Bedrock Connector",
-	"description": "Connection between AWS Bedrock and Neptune",
-	"ver": "24.07.04.1051",
+	"name": "bedrock-2.0",
+	"description": null,
+	"ver": "24.07.09.1903",
 	"enableCICD": true,
 	"apps": [
 		{
-			"id": "44482479-abef-4288-f808-b67660e3a006",
-			"application": "aws_bedrock_demo_app",
+			"id": "e668b6a3-8cf4-48a9-8132-5eddd6ce163a",
+			"application": "amazon_bedrock_v3",
 			"title": "",
 			"description": "",
 			"package": {
-				"id": "F250D4C6-F039-EF11-86C3-000D3ADD2E37"
+				"id": "01e71355-b382-434d-8296-105dc3824ca8"
 			}
 		}
 	],
 	"api": [
 		{
-			"id": "56e69790-f239-ef11-86c3-000d3add2e37",
-			"name": "AWS_Bedrock_Connector_API",
+			"id": "433f6f0a-3a99-484b-99d4-24d7d23e33de",
+			"name": "Bedrock_API",
 			"description": null,
 			"apiGroup": null
 		}
@@ -33,15 +33,15 @@
 	"dictionary": [],
 	"jsclass": [
 		{
-			"id": "14a3fffb-f039-ef11-86c3-000d3add2e37",
-			"name": "AWS_Bedrock_Connector_Script",
-			"description": "Script to connect Neptune with AWS Bedrock"
+			"id": "8945b059-7ae0-4efc-8e8c-b665a09e5762",
+			"name": "Bedrock Gen AI",
+			"description": null
 		}
 	],
 	"jsscript_group": [
 		{
-			"id": "aa0283e1-f039-ef11-86c3-000d3add2e37",
-			"name": "AWS_Bedrock_Connector",
+			"id": "31878e60-08ae-4b81-9bbc-4a0d3818e3ba",
+			"name": "AWS_Bedrock",
 			"description": ""
 		}
 	],

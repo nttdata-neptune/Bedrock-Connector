@@ -1,0 +1,184 @@
+.panelPlayground .sapMPanelWrappingDiv .sapUiIcon {
+    right: 0% !important;
+    color: #1d2d3e !important;
+}
+
+.panelPlayground .sapMPanelExpandable .sapMPanelWrappingDiv:focus {
+    outline: none !important;
+}
+
+#panelPlayground-header {
+    margin-left: 1.5rem;
+}
+
+.customListItem {
+    height: 25px;
+    border-bottom: none !important;
+}
+
+.customListItem .sapMLIB {
+    border-bottom: none !important;
+}
+
+.textSelectedPlayground {
+    margin-left: 1.3rem;
+    font-size: 15px;
+    line-height: 36px;
+    letter-spacing: normal;
+    font-weight: bold;
+}
+
+.textarea .sapMInputBaseInner {
+    border: 1px solid black !important;
+    border-radius: 5px;
+}
+
+.textarea .sapMInputBaseContentWrapper {
+    background-color: transparent !important;
+}
+
+.hBoxResponse {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 6px;
+    margin: 6px;
+    width: fit-content !important;
+}
+
+.iconAlignment {
+    padding: 3px;
+    margin-right: 11px !important;
+
+}
+
+.textResponse {
+    padding-left: 5px;
+    padding-right: 10px;
+    color: #fff8f8;
+}
+
+.textResponseForOutput {
+    padding-left: 5px;
+    padding-right: 10px;
+    color: #f7ff09;
+}
+
+.imageResponse {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+#middleBodyFlexBox {
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+#footerFlexBox {
+    margin-left: 66px;
+}
+
+#middleBodyContainer {
+    border: 1px solid grey;
+    border-radius: 10px;
+    background: currentColor;
+    overflow-y: auto;
+    overflow-x: hidden !important;
+}
+
+#pageAmazonBedrock {
+    background: currentColor;
+    // overflow: hidden !important;
+    overflow-y: scroll;
+    overflow-x:hidden !important;
+}
+
+#hBoxDropDowns {
+    margin: 10px;
+    margin-left: 70px;
+}
+
+#hBoxKeys {
+    margin: 10px;
+    margin-right: 70px;
+}
+
+#footerFlexBoxItemForRun {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    #footerFlexBox {
+        margin-left: 12px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #hBoxDropDowns {
+        margin: 10px;
+    }
+}
+
+#selectPlayground .form-select,
+#selectModels .form-select {
+    background-color: rgb(29, 45, 62) !important;
+    color: white;
+    --bs-form-select-bg-img: url(https://www.iconsdb.com/icons/preview/white/arrow-204-xxl.png) !important;
+}
+
+#selectModels {
+    margin-left: 15px;
+}
+
+#inputAccessKey .form-control,
+#inputAccessSecretKey .form-control {
+    background-color: rgb(29, 45, 62) !important;
+    color: white !important;
+    border: none !important;
+}
+
+#inputAccessKey___input::placeholder,
+#inputAccessSecretKey___input::placeholder {
+    color: white !important;
+    opacity: 0.7;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.hboxAccessKey,
+.hboxSecretAccessKey {
+    border: 1px solid white;
+    border-radius: 6px;
+}
+
+.errorHighlight {
+    border: 1.5px solid rgb(255, 15, 15);
+    border-radius: 6px;
+    // border-radius: 6px;
+}
+
+#imgEye,
+#imgEye1 {
+    margin: 10px 7px 0px 0px;
+}
+
+#BusyDialog-busyInd-busy-area {
+    display: table-row !important;
+
+}
+
+@media screen and (max-width: 500px) {
+    #headerFlexBox {
+        width: 100% !important;
+        height: 11% !important;
+        flex-wrap: wrap !important;
+    }
+
+    #headerFlexBoxItemDropDowns {
+        width: 100% !important;
+    }
+
+    #headerFlexBoxItemKeys {
+        width: 100% !important;
+    }
+}
