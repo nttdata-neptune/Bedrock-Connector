@@ -34,30 +34,277 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var inputText = req.query.inputValue;
+var PROMPT = req.query.inputValue;
 var playground = req.query.playground;
 var accessKey = req.query.accessKey;
 var secretKey = req.query.secretKey;
 var modelId = req.query.modelId;
+var modelProvider = req.query.modelProvider;
 var awssdkclientbedrock = modules.awssdkclientbedrock;
 var awssdkclientbedrockruntime = modules.awssdkclientbedrockruntime;
+//validating users credentials
 var client = new awssdkclientbedrockruntime.BedrockRuntimeClient({
     region: "us-east-1",
     credentials: {
         accessKeyId: accessKey,
-        secretAccessKey: secretKey
+        secretAccessKey: secretKey,
     },
 });
-var PROMPT = inputText;
+//validating and calling functions based on model provider 
 if (playground == "Chat" || playground == "Text") {
-    amazonChat(modelId);
+    log.info(playground + modelProvider + modelId);
+    switch (modelProvider) {
+        case "Anthropic":
+            anthropicChat(modelId);
+            break;
+        case "Amazon":
+            amazonChat(modelId);
+            break;
+        case "AI21":
+            ai21Chat(modelId);
+            break;
+        case "Cohere":
+            cohereChat(modelId);
+            break;
+        case "Meta":
+            metaChat(modelId);
+            break;
+        case "MistralAI":
+            mistralAIChat(modelId);
+            break;
+    }
 }
 else if (playground == "Image") {
     amazonImage(modelId);
 }
+function mistralAIChat(MODEL_ID) {
+    return __awaiter(this, void 0, void 0, function () {
+        var params, command, res, e_1, jsonString, modelRes, bodyRes;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    params = {
+                        modelId: MODEL_ID,
+                        contentType: "application/json",
+                        accept: "application/json",
+                        body: JSON.stringify({
+                            prompt: PROMPT,
+                            max_tokens: 100,
+                            temperature: 0.5,
+                            top_p: 0.9,
+                            top_k: 50,
+                        }),
+                    };
+                    command = new awssdkclientbedrockruntime.InvokeModelCommand(params);
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 3, , 4]);
+                    return [4 /*yield*/, client.send(command)];
+                case 2:
+                    res = _a.sent();
+                    return [3 /*break*/, 4];
+                case 3:
+                    e_1 = _a.sent();
+                    console.log("error", e_1);
+                    return [3 /*break*/, 4];
+                case 4:
+                    jsonString = new TextDecoder().decode(res.body);
+                    modelRes = JSON.parse(jsonString);
+                    bodyRes = {
+                        prompt: PROMPT,
+                        completion: modelRes.outputs[0].text,
+                    };
+                    result = bodyRes.completion;
+                    complete();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+function metaChat(MODEL_ID) {
+    return __awaiter(this, void 0, void 0, function () {
+        var params, command, res, e_2, jsonString, modelRes, bodyRes;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    params = {
+                        modelId: MODEL_ID,
+                        contentType: "application/json",
+                        accept: "application/json",
+                        body: JSON.stringify({
+                            prompt: PROMPT,
+                            max_gen_len: 400,
+                            temperature: 0.5,
+                            top_p: 0.7,
+                        }),
+                    };
+                    command = new awssdkclientbedrockruntime.InvokeModelCommand(params);
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 3, , 4]);
+                    return [4 /*yield*/, client.send(command)];
+                case 2:
+                    res = _a.sent();
+                    return [3 /*break*/, 4];
+                case 3:
+                    e_2 = _a.sent();
+                    console.log("error", e_2);
+                    return [3 /*break*/, 4];
+                case 4:
+                    jsonString = new TextDecoder().decode(res.body);
+                    modelRes = JSON.parse(jsonString);
+                    bodyRes = {
+                        prompt: PROMPT,
+                        completion: modelRes.generation,
+                    };
+                    result = bodyRes.completion;
+                    complete();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+function cohereChat(MODEL_ID) {
+    return __awaiter(this, void 0, void 0, function () {
+        var params, command, res, e_3, jsonString, modelRes, bodyRes;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    params = {
+                        modelId: MODEL_ID,
+                        contentType: "application/json",
+                        accept: "application/json",
+                        body: JSON.stringify({
+                            prompt: PROMPT,
+                            max_tokens: 400,
+                            temperature: 0.75,
+                            p: 0.01,
+                            k: 0,
+                            stop_sequences: [],
+                            return_likelihoods: "NONE",
+                        }),
+                    };
+                    command = new awssdkclientbedrockruntime.InvokeModelCommand(params);
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 3, , 4]);
+                    return [4 /*yield*/, client.send(command)];
+                case 2:
+                    res = _a.sent();
+                    return [3 /*break*/, 4];
+                case 3:
+                    e_3 = _a.sent();
+                    console.log("error", e_3);
+                    return [3 /*break*/, 4];
+                case 4:
+                    jsonString = new TextDecoder().decode(res.body);
+                    modelRes = JSON.parse(jsonString);
+                    bodyRes = {
+                        prompt: PROMPT,
+                        completion: modelRes.generations[0].text,
+                    };
+                    result = bodyRes.completion;
+                    complete();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+function ai21Chat(MODEL_ID) {
+    return __awaiter(this, void 0, void 0, function () {
+        var params, command, res, e_4, jsonString, modelRes, bodyRes;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    params = {
+                        modelId: MODEL_ID,
+                        contentType: "application/json",
+                        accept: "application/json",
+                        body: JSON.stringify({
+                            prompt: PROMPT,
+                            maxTokens: 200,
+                            temperature: 0.7,
+                            topP: 1,
+                            stopSequences: [],
+                            countPenalty: { scale: 0 },
+                            presencePenalty: { scale: 0 },
+                            frequencyPenalty: { scale: 0 },
+                        }),
+                    };
+                    command = new awssdkclientbedrockruntime.InvokeModelCommand(params);
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 3, , 4]);
+                    return [4 /*yield*/, client.send(command)];
+                case 2:
+                    res = _a.sent();
+                    return [3 /*break*/, 4];
+                case 3:
+                    e_4 = _a.sent();
+                    console.log("error", e_4);
+                    return [3 /*break*/, 4];
+                case 4:
+                    jsonString = new TextDecoder().decode(res.body);
+                    modelRes = JSON.parse(jsonString);
+                    bodyRes = {
+                        prompt: PROMPT,
+                        completion: modelRes.completions[0].data.text,
+                    };
+                    result = bodyRes.completion;
+                    complete();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+function anthropicChat(MODEL_ID) {
+    return __awaiter(this, void 0, void 0, function () {
+        var params, command, res, e_5, jsonString, modelRes, bodyRes;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    params = {
+                        modelId: MODEL_ID,
+                        contentType: "application/json",
+                        accept: "application/json",
+                        body: JSON.stringify({
+                            prompt: "\n\nHuman:".concat(PROMPT, "\n\nAssistant:"),
+                            max_tokens_to_sample: 300,
+                            temperature: 0.5,
+                            top_k: 250,
+                            top_p: 1,
+                        }),
+                    };
+                    command = new awssdkclientbedrockruntime.InvokeModelCommand(params);
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 3, , 4]);
+                    return [4 /*yield*/, client.send(command)];
+                case 2:
+                    res = _a.sent();
+                    return [3 /*break*/, 4];
+                case 3:
+                    e_5 = _a.sent();
+                    console.log("error", e_5);
+                    return [3 /*break*/, 4];
+                case 4:
+                    jsonString = new TextDecoder().decode(res.body);
+                    modelRes = JSON.parse(jsonString);
+                    bodyRes = {
+                        prompt: PROMPT,
+                        completion: modelRes.completion,
+                    };
+                    log.info(bodyRes.completion);
+                    result = bodyRes.completion;
+                    complete();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
 function amazonChat(MODEL_ID) {
     return __awaiter(this, void 0, void 0, function () {
-        var params, command, res, e_1, jsonString, modelRes, bodyRes, storeResponse, searchText, regex, serach, regexSearch;
+        var params, command, res, e_6, jsonString, modelRes, bodyRes, storeResponse, searchText, regex, serach, regexSearch;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -84,8 +331,8 @@ function amazonChat(MODEL_ID) {
                     res = _a.sent();
                     return [3 /*break*/, 4];
                 case 3:
-                    e_1 = _a.sent();
-                    console.log("error", e_1);
+                    e_6 = _a.sent();
+                    console.log("error", e_6);
                     return [3 /*break*/, 4];
                 case 4:
                     jsonString = new TextDecoder().decode(res.body);
@@ -94,8 +341,8 @@ function amazonChat(MODEL_ID) {
                         prompt: PROMPT,
                         completion: modelRes.results[0].outputText,
                     };
-                    console.log(bodyRes);
                     storeResponse = modelRes.results[0].outputText;
+                    log.info("store", storeResponse);
                     searchText = "\nBot:";
                     regex = new RegExp(searchText);
                     serach = "\n";
@@ -115,7 +362,7 @@ function amazonChat(MODEL_ID) {
 }
 function amazonImage(MODEL_ID) {
     return __awaiter(this, void 0, void 0, function () {
-        var params, command, res, e_2, jsonString, modelRes, imageDateArray, i, base64Image;
+        var params, command, res, e_7, jsonString, modelRes, imageDateArray, i, base64Image;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -126,7 +373,7 @@ function amazonImage(MODEL_ID) {
                         body: JSON.stringify({
                             taskType: "TEXT_IMAGE",
                             textToImageParams: {
-                                text: inputText,
+                                text: PROMPT,
                             },
                             imageGenerationConfig: {
                                 numberOfImages: 1,
@@ -146,19 +393,20 @@ function amazonImage(MODEL_ID) {
                     res = _a.sent();
                     return [3 /*break*/, 4];
                 case 3:
-                    e_2 = _a.sent();
-                    console.log("error", e_2);
+                    e_7 = _a.sent();
+                    console.log("error", e_7);
                     return [3 /*break*/, 4];
                 case 4:
+                    log.info("res", res);
                     jsonString = new TextDecoder().decode(res.body);
                     modelRes = JSON.parse(jsonString);
-                    console.log("modelRes", modelRes);
+                    log.info("model", modelRes);
                     imageDateArray = [];
                     for (i = 0; i < modelRes["images"].length; i++) {
                         base64Image = modelRes["images"][i];
                         imageDateArray.push(base64Image);
                     }
-                    console.log("image", imageDateArray);
+                    log.info("image", imageDateArray);
                     result = imageDateArray;
                     complete();
                     return [2 /*return*/];

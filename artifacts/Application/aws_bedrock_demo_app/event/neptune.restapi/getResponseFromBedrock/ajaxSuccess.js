@@ -1,7 +1,6 @@
-var key = Select1.getSelectedKey();
-console.log("key", key);
-var playground;
-if (key == "1" || key == "2" || key == null) {
+var key = selectPlayground.getSelectedKey();
+
+if (key == "Chat" || key == "Text" || key == null) {
     var icon = new sap.ui.core.Icon({
         src: "sap-icon://fa-solid/user-astronaut",
         size: "1rem",
@@ -19,8 +18,8 @@ if (key == "1" || key == "2" || key == null) {
     icon.addStyleClass("iconAlignment");
     textHello.addStyleClass("textResponseForOutput");
     hbox.addStyleClass("hBoxResponse");
-    Container1.addContent(hbox);
-} else if (key == "3") {
+    middleBodyContainer.addContent(hbox);
+} else if (key == "Image") {
     
      var icon = new sap.ui.core.Icon({
         src: "sap-icon://fa-solid/user-astronaut",
@@ -40,10 +39,8 @@ if (key == "1" || key == "2" || key == null) {
     icon.addStyleClass("iconAlignment");
     hbox.addStyleClass("hBoxResponse");
     image.addStyleClass("imageResponse");
-    Container1.addContent(hbox);
+    middleBodyContainer.addContent(hbox);
     BusyDialog.close();
 }
-
-// ===============
 
 inputPromt.setValue("");

@@ -4,7 +4,7 @@
 	"createdBy": "nagarjuna.thallam",
 	"objects": [
 		{
-			"fieldNo": "62f07663-f387-4785-8cb3-36d9359a6810",
+			"fieldNo": "4b5f5097-dde3-4b9e-b484-d20350a72d2b",
 			"fieldName": "Shell",
 			"fieldParent": 0,
 			"fieldType": "sap.m.Shell",
@@ -15,9 +15,9 @@
 			"attributes": [],
 			"data": [
 				{
-					"fieldNo": "33d22369-bb19-47e0-e9f4-2181139673d0",
-					"fieldName": "App1",
-					"fieldParent": "62f07663-f387-4785-8cb3-36d9359a6810",
+					"fieldNo": "f7d9781e-fba4-4711-a808-a04eacc7578f",
+					"fieldName": "appAmazonBedrock",
+					"fieldParent": "4b5f5097-dde3-4b9e-b484-d20350a72d2b",
 					"fieldType": "sap.m.App",
 					"script": "",
 					"customComponent": false,
@@ -26,9 +26,9 @@
 					"attributes": [],
 					"data": [
 						{
-							"fieldNo": "25be1f3e-991d-48b0-a913-1c671d762472",
-							"fieldName": "Page1",
-							"fieldParent": "33d22369-bb19-47e0-e9f4-2181139673d0",
+							"fieldNo": "a8e95582-fc2c-4f57-b038-cb4276fc88fe",
+							"fieldName": "pageAmazonBedrock",
+							"fieldParent": "f7d9781e-fba4-4711-a808-a04eacc7578f",
 							"fieldType": "nep.bootstrap.Page",
 							"script": "",
 							"customComponent": false,
@@ -37,9 +37,9 @@
 							"attributes": [],
 							"data": [
 								{
-									"fieldNo": "982c5cc7-6a29-4354-ee1f-a2b26ee65b1b",
-									"fieldName": "FlexBox",
-									"fieldParent": "25be1f3e-991d-48b0-a913-1c671d762472",
+									"fieldNo": "896b2338-9836-442a-9064-3ebb09eea639",
+									"fieldName": "headerFlexBox",
+									"fieldParent": "a8e95582-fc2c-4f57-b038-cb4276fc88fe",
 									"fieldType": "nep.bootstrap.FlexBox",
 									"script": "",
 									"customComponent": false,
@@ -63,28 +63,20 @@
 									],
 									"data": [
 										{
-											"fieldNo": "0a262f93-d9ea-4428-e1bf-9341423c8e48",
-											"fieldName": "FlexBoxItem1",
-											"fieldParent": "982c5cc7-6a29-4354-ee1f-a2b26ee65b1b",
+											"fieldNo": "a97b71cc-9ba7-4999-a188-82e6b08978c6",
+											"fieldName": "headerFlexBoxItemDropDowns",
+											"fieldParent": "896b2338-9836-442a-9064-3ebb09eea639",
 											"fieldType": "nep.bootstrap.FlexBoxItem",
 											"script": "",
 											"customComponent": false,
 											"request": [],
 											"response": [],
-											"attributes": [
-												{
-													"attribute": "width",
-													"grouping": "Properties",
-													"value": "auto",
-													"script": "",
-													"translation": []
-												}
-											],
+											"attributes": [],
 											"data": [
 												{
-													"fieldNo": "63a709cf-332a-4ff5-cad5-8a2e79430962",
-													"fieldName": "HBox",
-													"fieldParent": "0a262f93-d9ea-4428-e1bf-9341423c8e48",
+													"fieldNo": "38fbbce1-494b-4569-a9eb-3789a20f02d1",
+													"fieldName": "hBoxDropDowns",
+													"fieldParent": "a97b71cc-9ba7-4999-a188-82e6b08978c6",
 													"fieldType": "sap.m.HBox",
 													"script": "",
 													"customComponent": false,
@@ -93,9 +85,9 @@
 													"attributes": [],
 													"data": [
 														{
-															"fieldNo": "5b10c6a0-75b9-4397-fef7-44c99a9fc864",
-															"fieldName": "Select1",
-															"fieldParent": "63a709cf-332a-4ff5-cad5-8a2e79430962",
+															"fieldNo": "35405abf-f1b0-431c-c2a5-ac70d0da0748",
+															"fieldName": "selectPlayground",
+															"fieldParent": "38fbbce1-494b-4569-a9eb-3789a20f02d1",
 															"fieldType": "nep.bootstrap.Select",
 															"script": "",
 															"customComponent": false,
@@ -109,16 +101,16 @@
 																	"attribute": "change",
 																	"grouping": "Events",
 																	"value": "Anonymous Function",
-																	"script": "file://event/nep.bootstrap.Select/Select1/change.js",
+																	"script": "file://event/nep.bootstrap.Select/selectPlayground/change.js",
 																	"language": "javascript",
 																	"translation": []
 																}
 															],
 															"data": [
 																{
-																	"fieldNo": "a47dd584-d0ff-4a85-8ecf-ac350cc62ea0",
-																	"fieldName": "Item",
-																	"fieldParent": "5b10c6a0-75b9-4397-fef7-44c99a9fc864",
+																	"fieldNo": "1da4921a-149d-4412-decd-b1a9aec80b24",
+																	"fieldName": "itemPlayground",
+																	"fieldParent": "35405abf-f1b0-431c-c2a5-ac70d0da0748",
 																	"fieldType": "sap.ui.core.Item",
 																	"script": "",
 																	"customComponent": false,
@@ -146,9 +138,9 @@
 															]
 														},
 														{
-															"fieldNo": "e262fb87-b116-49ec-d6b0-efb46e5cb00a",
-															"fieldName": "Select2",
-															"fieldParent": "63a709cf-332a-4ff5-cad5-8a2e79430962",
+															"fieldNo": "f506896d-8f0a-4383-91cb-d5f36fcff672",
+															"fieldName": "selectModels",
+															"fieldParent": "38fbbce1-494b-4569-a9eb-3789a20f02d1",
 															"fieldType": "nep.bootstrap.Select",
 															"script": "",
 															"customComponent": false,
@@ -162,16 +154,16 @@
 																	"attribute": "change",
 																	"grouping": "Events",
 																	"value": "Anonymous Function",
-																	"script": "file://event/nep.bootstrap.Select/Select2/change.js",
+																	"script": "file://event/nep.bootstrap.Select/selectModels/change.js",
 																	"language": "javascript",
 																	"translation": []
 																}
 															],
 															"data": [
 																{
-																	"fieldNo": "836ba8d2-8e25-4fe3-f407-13e4acec1b9e",
-																	"fieldName": "Item3",
-																	"fieldParent": "e262fb87-b116-49ec-d6b0-efb46e5cb00a",
+																	"fieldNo": "33de0bdb-8dc2-42a4-e390-968ce61530ab",
+																	"fieldName": "itemModels",
+																	"fieldParent": "f506896d-8f0a-4383-91cb-d5f36fcff672",
 																	"fieldType": "sap.ui.core.Item",
 																	"script": "",
 																	"customComponent": false,
@@ -182,14 +174,14 @@
 																		{
 																			"attribute": "text",
 																			"grouping": "Properties",
-																			"value": "{text}",
+																			"value": "{modelText}",
 																			"script": "",
 																			"translation": []
 																		},
 																		{
 																			"attribute": "key",
 																			"grouping": "Properties",
-																			"value": "{key}",
+																			"value": "{modelId}+{modelProvider}",
 																			"script": "",
 																			"translation": []
 																		}
@@ -203,9 +195,9 @@
 											]
 										},
 										{
-											"fieldNo": "ee3a115e-838f-4cfc-f6e6-cf96107d0c23",
-											"fieldName": "FlexBoxItem6",
-											"fieldParent": "982c5cc7-6a29-4354-ee1f-a2b26ee65b1b",
+											"fieldNo": "c6d19ada-a1cf-4be8-b1fa-3f2ace28d58c",
+											"fieldName": "headerFlexBoxItemKeys",
+											"fieldParent": "896b2338-9836-442a-9064-3ebb09eea639",
 											"fieldType": "nep.bootstrap.FlexBoxItem",
 											"script": "",
 											"customComponent": false,
@@ -214,9 +206,9 @@
 											"attributes": [],
 											"data": [
 												{
-													"fieldNo": "685c0ebc-3d21-4c4c-8bfb-bb32dc8b4398",
-													"fieldName": "HBox1",
-													"fieldParent": "ee3a115e-838f-4cfc-f6e6-cf96107d0c23",
+													"fieldNo": "82e661d6-27e6-4268-a51a-402926036507",
+													"fieldName": "hBoxKeys",
+													"fieldParent": "c6d19ada-a1cf-4be8-b1fa-3f2ace28d58c",
 													"fieldType": "sap.m.HBox",
 													"script": "",
 													"customComponent": false,
@@ -233,9 +225,9 @@
 													],
 													"data": [
 														{
-															"fieldNo": "52ff5ea6-73fd-4e0a-dd14-16dec3d5d555",
+															"fieldNo": "3ef4f03a-344d-460b-efc0-e7b24dbf4164",
 															"fieldName": "hboxAccessKey",
-															"fieldParent": "685c0ebc-3d21-4c4c-8bfb-bb32dc8b4398",
+															"fieldParent": "82e661d6-27e6-4268-a51a-402926036507",
 															"fieldType": "sap.m.HBox",
 															"script": "",
 															"customComponent": false,
@@ -266,9 +258,9 @@
 															],
 															"data": [
 																{
-																	"fieldNo": "b8fb6319-c005-4760-fc9f-2abc5c9590bd",
+																	"fieldNo": "377b0c14-8606-42e0-a9fe-ba212f35350c",
 																	"fieldName": "inputAccessKey",
-																	"fieldParent": "52ff5ea6-73fd-4e0a-dd14-16dec3d5d555",
+																	"fieldParent": "3ef4f03a-344d-460b-efc0-e7b24dbf4164",
 																	"fieldType": "nep.bootstrap.Input",
 																	"script": "",
 																	"customComponent": false,
@@ -285,16 +277,8 @@
 																		{
 																			"attribute": "placeholder",
 																			"grouping": "Properties",
-																			"value": "Enter Access key",
+																			"value": "Enter Access key...",
 																			"script": "",
-																			"translation": []
-																		},
-																		{
-																			"attribute": "change",
-																			"grouping": "Events",
-																			"value": "Anonymous Function",
-																			"script": "file://event/nep.bootstrap.Input/inputAccessKey/change.js",
-																			"language": "javascript",
 																			"translation": []
 																		},
 																		{
@@ -303,14 +287,29 @@
 																			"value": "MarginEnd3",
 																			"script": "",
 																			"translation": []
+																		},
+																		{
+																			"attribute": "liveChangeEnabled",
+																			"grouping": "Properties",
+																			"value": "true",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "liveChange",
+																			"grouping": "Events",
+																			"value": "Anonymous Function",
+																			"script": "file://event/nep.bootstrap.Input/inputAccessKey/liveChange.js",
+																			"language": "javascript",
+																			"translation": []
 																		}
 																	],
 																	"data": []
 																},
 																{
-																	"fieldNo": "d7d25089-d2a4-4ef8-9c0e-a2852bdecb9d",
+																	"fieldNo": "d3506228-e461-462c-e9cb-792920341593",
 																	"fieldName": "imgEye",
-																	"fieldParent": "52ff5ea6-73fd-4e0a-dd14-16dec3d5d555",
+																	"fieldParent": "3ef4f03a-344d-460b-efc0-e7b24dbf4164",
 																	"fieldType": "sap.m.Image",
 																	"script": "",
 																	"customComponent": false,
@@ -345,9 +344,9 @@
 															]
 														},
 														{
-															"fieldNo": "0a99162d-004e-4c1d-99eb-48904b54ce01",
+															"fieldNo": "2a73747f-6f78-4631-d67c-3d63d2afb8e1",
 															"fieldName": "hboxSecretAccessKey",
-															"fieldParent": "685c0ebc-3d21-4c4c-8bfb-bb32dc8b4398",
+															"fieldParent": "82e661d6-27e6-4268-a51a-402926036507",
 															"fieldType": "sap.m.HBox",
 															"script": "",
 															"customComponent": false,
@@ -378,9 +377,9 @@
 															],
 															"data": [
 																{
-																	"fieldNo": "028bf0df-7f4b-4e1e-91ef-753d41b9217a",
+																	"fieldNo": "10a979c7-314d-458c-c760-dfbb9a58db7f",
 																	"fieldName": "inputAccessSecretKey",
-																	"fieldParent": "0a99162d-004e-4c1d-99eb-48904b54ce01",
+																	"fieldParent": "2a73747f-6f78-4631-d67c-3d63d2afb8e1",
 																	"fieldType": "nep.bootstrap.Input",
 																	"script": "",
 																	"customComponent": false,
@@ -397,15 +396,22 @@
 																		{
 																			"attribute": "placeholder",
 																			"grouping": "Properties",
-																			"value": "Enter Secret access key",
+																			"value": "Enter Secret access key...",
 																			"script": "",
 																			"translation": []
 																		},
 																		{
-																			"attribute": "change",
+																			"attribute": "liveChangeEnabled",
+																			"grouping": "Properties",
+																			"value": "true",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "liveChange",
 																			"grouping": "Events",
 																			"value": "Anonymous Function",
-																			"script": "file://event/nep.bootstrap.Input/inputAccessSecretKey/change.js",
+																			"script": "file://event/nep.bootstrap.Input/inputAccessSecretKey/liveChange.js",
 																			"language": "javascript",
 																			"translation": []
 																		}
@@ -413,9 +419,9 @@
 																	"data": []
 																},
 																{
-																	"fieldNo": "1a4a6b27-52a2-4ee7-f99f-7acad4c4683f",
+																	"fieldNo": "709f9810-4c38-4f7b-cb9b-4deb0df33b4a",
 																	"fieldName": "imgEye1",
-																	"fieldParent": "0a99162d-004e-4c1d-99eb-48904b54ce01",
+																	"fieldParent": "2a73747f-6f78-4631-d67c-3d63d2afb8e1",
 																	"fieldType": "sap.m.Image",
 																	"script": "",
 																	"customComponent": false,
@@ -452,34 +458,13 @@
 													]
 												}
 											]
-										},
-										{
-											"fieldNo": "651a8a6f-b019-4f32-c0d1-e1bd71b0b778",
-											"fieldName": "FlexBoxItem",
-											"fieldParent": "982c5cc7-6a29-4354-ee1f-a2b26ee65b1b",
-											"fieldType": "nep.bootstrap.FlexBoxItem",
-											"script": "",
-											"customComponent": false,
-											"disabled": true,
-											"request": [],
-											"response": [],
-											"attributes": [
-												{
-													"attribute": "width",
-													"grouping": "Properties",
-													"value": "50%",
-													"script": "",
-													"translation": []
-												}
-											],
-											"data": []
 										}
 									]
 								},
 								{
-									"fieldNo": "44d5f840-1b74-4639-a38c-4ea190558cc5",
-									"fieldName": "FlexBox2",
-									"fieldParent": "25be1f3e-991d-48b0-a913-1c671d762472",
+									"fieldNo": "0b90839f-587e-4afe-831e-1cc9232c0a81",
+									"fieldName": "middleBodyFlexBox",
+									"fieldParent": "a8e95582-fc2c-4f57-b038-cb4276fc88fe",
 									"fieldType": "nep.bootstrap.FlexBox",
 									"script": "",
 									"customComponent": false,
@@ -489,16 +474,16 @@
 										{
 											"attribute": "height",
 											"grouping": "Properties",
-											"value": "83%",
+											"value": "82%",
 											"script": "",
 											"translation": []
 										}
 									],
 									"data": [
 										{
-											"fieldNo": "3db8b947-ad01-4c8c-dd31-f95984cd7d0d",
-											"fieldName": "FlexBoxItem4",
-											"fieldParent": "44d5f840-1b74-4639-a38c-4ea190558cc5",
+											"fieldNo": "a62eaab3-9161-4441-c31b-9f3218800459",
+											"fieldName": "middleBodyFlexBoxItem",
+											"fieldParent": "0b90839f-587e-4afe-831e-1cc9232c0a81",
 											"fieldType": "nep.bootstrap.FlexBoxItem",
 											"script": "",
 											"customComponent": false,
@@ -522,9 +507,9 @@
 											],
 											"data": [
 												{
-													"fieldNo": "742d7ba5-fd7f-4bf0-88f9-3b2808bd5b72",
-													"fieldName": "Container1",
-													"fieldParent": "3db8b947-ad01-4c8c-dd31-f95984cd7d0d",
+													"fieldNo": "9533645c-336c-4aed-e28c-ab582d7b98d3",
+													"fieldName": "middleBodyContainer",
+													"fieldParent": "a62eaab3-9161-4441-c31b-9f3218800459",
 													"fieldType": "nep.bootstrap.Container",
 													"script": "",
 													"customComponent": false,
@@ -547,39 +532,34 @@
 														}
 													],
 													"data": []
-												},
-												{
-													"fieldNo": "698435b6-a1fb-4ef4-c2d2-0c469f18ccef",
-													"fieldName": "VBox",
-													"fieldParent": "3db8b947-ad01-4c8c-dd31-f95984cd7d0d",
-													"fieldType": "sap.m.VBox",
-													"script": "",
-													"customComponent": false,
-													"disabled": true,
-													"request": [],
-													"response": [],
-													"attributes": [],
-													"data": []
 												}
 											]
 										}
 									]
 								},
 								{
-									"fieldNo": "65edb738-3295-494e-bc84-0e11a5042e89",
-									"fieldName": "FlexBox1",
-									"fieldParent": "25be1f3e-991d-48b0-a913-1c671d762472",
+									"fieldNo": "7d9f8725-f6a2-4ab4-8eda-6619cda06d01",
+									"fieldName": "footerFlexBox",
+									"fieldParent": "a8e95582-fc2c-4f57-b038-cb4276fc88fe",
 									"fieldType": "nep.bootstrap.FlexBox",
 									"script": "",
 									"customComponent": false,
 									"request": [],
 									"response": [],
-									"attributes": [],
+									"attributes": [
+										{
+											"attribute": "height",
+											"grouping": "Properties",
+											"value": "8%",
+											"script": "",
+											"translation": []
+										}
+									],
 									"data": [
 										{
-											"fieldNo": "a2c07a3c-46bd-4ddb-cae0-c0823a0e7538",
-											"fieldName": "FlexBoxItem2",
-											"fieldParent": "65edb738-3295-494e-bc84-0e11a5042e89",
+											"fieldNo": "4d2f5d5a-00e2-45d2-d65b-0c02b8a04d47",
+											"fieldName": "footerFlexBoxItemForInput",
+											"fieldParent": "7d9f8725-f6a2-4ab4-8eda-6619cda06d01",
 											"fieldType": "nep.bootstrap.FlexBoxItem",
 											"script": "",
 											"customComponent": false,
@@ -596,26 +576,55 @@
 											],
 											"data": [
 												{
-													"fieldNo": "ebf1888b-7210-489a-a549-12f68b0ccf7f",
+													"fieldNo": "7a443abd-8f2e-4019-c4d9-bf655b50229c",
 													"fieldName": "inputPromt",
-													"fieldParent": "a2c07a3c-46bd-4ddb-cae0-c0823a0e7538",
-													"fieldType": "nep.bootstrap.Input",
+													"fieldParent": "4d2f5d5a-00e2-45d2-d65b-0c02b8a04d47",
+													"fieldType": "sap.m.TextArea",
 													"script": "",
 													"customComponent": false,
 													"request": [],
 													"response": [],
 													"attributes": [
 														{
-															"attribute": "placeholder",
+															"attribute": "width",
 															"grouping": "Properties",
-															"value": "write a promt...",
+															"value": "100%",
 															"script": "",
 															"translation": []
 														},
 														{
-															"attribute": "width",
+															"attribute": "placeholder",
 															"grouping": "Properties",
-															"value": "100%",
+															"value": "write a promt...(Shift + Enter to start a new line, ENTER to generate a response)",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "growing",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "liveChange",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": "file://event/sap.m.TextArea/inputPromt/liveChange.js",
+															"language": "javascript",
+															"translation": []
+														},
+														{
+															"attribute": "required",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "showExceededText",
+															"grouping": "Properties",
+															"value": "true",
 															"script": "",
 															"translation": []
 														}
@@ -625,9 +634,9 @@
 											]
 										},
 										{
-											"fieldNo": "aa5d8dcb-a6ba-40d8-cfd4-e45dc2095d10",
-											"fieldName": "FlexBoxItem3",
-											"fieldParent": "65edb738-3295-494e-bc84-0e11a5042e89",
+											"fieldNo": "87b2cf7f-fd31-4cba-e9f6-619982f7e323",
+											"fieldName": "footerFlexBoxItemForRun",
+											"fieldParent": "7d9f8725-f6a2-4ab4-8eda-6619cda06d01",
 											"fieldType": "nep.bootstrap.FlexBoxItem",
 											"script": "",
 											"customComponent": false,
@@ -644,9 +653,9 @@
 											],
 											"data": [
 												{
-													"fieldNo": "35ff10b9-7c99-44bc-ab00-6c065c00f88e",
+													"fieldNo": "fcfd2e3c-03a5-4b8b-a3a4-87666ece0fbf",
 													"fieldName": "buttonRun",
-													"fieldParent": "aa5d8dcb-a6ba-40d8-cfd4-e45dc2095d10",
+													"fieldParent": "87b2cf7f-fd31-4cba-e9f6-619982f7e323",
 													"fieldType": "nep.bootstrap.Button",
 													"script": "",
 													"customComponent": false,
@@ -664,7 +673,8 @@
 															"attribute": "press",
 															"grouping": "Events",
 															"value": "Anonymous Function",
-															"script": "file://event/nep.bootstrap.Button/buttonRun/press.script",
+															"script": "executeRequest();",
+															"language": "javascript",
 															"translation": []
 														},
 														{
@@ -699,9 +709,9 @@
 													"data": []
 												},
 												{
-													"fieldNo": "7f0b3c1d-5d9c-4c43-db52-b32464595b57",
+													"fieldNo": "52d45671-7e5c-4932-9ed2-9858d90cc358",
 													"fieldName": "buttonRunMobileView",
-													"fieldParent": "aa5d8dcb-a6ba-40d8-cfd4-e45dc2095d10",
+													"fieldParent": "87b2cf7f-fd31-4cba-e9f6-619982f7e323",
 													"fieldType": "nep.bootstrap.Button",
 													"script": "",
 													"customComponent": false,
@@ -719,7 +729,7 @@
 															"attribute": "press",
 															"grouping": "Events",
 															"value": "Anonymous Function",
-															"script": "file://event/nep.bootstrap.Button/buttonRunMobileView/press.js",
+															"script": "executeRequest();",
 															"language": "javascript",
 															"translation": []
 														},
@@ -741,27 +751,6 @@
 													"data": []
 												}
 											]
-										},
-										{
-											"fieldNo": "2e9435fe-48ae-47e2-8d6c-2c85883dbc94",
-											"fieldName": "FlexBoxItem5",
-											"fieldParent": "65edb738-3295-494e-bc84-0e11a5042e89",
-											"fieldType": "nep.bootstrap.FlexBoxItem",
-											"script": "",
-											"customComponent": false,
-											"disabled": true,
-											"request": [],
-											"response": [],
-											"attributes": [
-												{
-													"attribute": "styleClassVisibility",
-													"grouping": "Properties",
-													"value": "sapUiHideOnDesktop",
-													"script": "",
-													"translation": []
-												}
-											],
-											"data": []
 										}
 									]
 								}
@@ -787,7 +776,7 @@
 					"data": []
 				},
 				{
-					"fieldNo": "de8f191a-d4ee-40d7-df6b-68fede8f00bc",
+					"fieldNo": "cc1cdb51-8eb7-450f-adc0-59d5f0790447",
 					"fieldName": "BusyDialog",
 					"fieldParent": 99999,
 					"fieldType": "sap.m.BusyDialog",
@@ -799,7 +788,22 @@
 					"data": []
 				},
 				{
-					"fieldNo": "d469f821-ddd1-49f8-9f9b-b90c6cca60a1",
+					"fieldNo": "468be6ea-bd03-44c8-9945-acc1bba7dd78",
+					"fieldName": "multiModelArray",
+					"fieldParent": 99999,
+					"fieldType": "neptune.model",
+					"script": "",
+					"customComponent": false,
+					"bindingValue": "Generic Array",
+					"bindingType": "h",
+					"bindingSource": "P9",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "18d37f7a-d6d7-4a98-c122-72d399a3e0ac",
 					"fieldName": "multiModelStoreResponse",
 					"fieldParent": 99999,
 					"fieldType": "neptune.model",
@@ -816,7 +820,7 @@
 					"data": []
 				},
 				{
-					"fieldNo": "707c6a96-d0a0-4ba5-a8e5-5d263ae974a4",
+					"fieldNo": "43a05e04-1ee1-4332-dd8b-0ba396fcb6d9",
 					"fieldName": "getResponseFromBedrock",
 					"fieldParent": 99999,
 					"fieldType": "neptune.restapi",
@@ -829,7 +833,7 @@
 						{
 							"status": "200",
 							"dataId": "102d676d-bc7b-488c-8737-a50eaa98a2cf",
-							"modelFieldNo": "d469f821-ddd1-49f8-9f9b-b90c6cca60a1"
+							"modelFieldNo": "18d37f7a-d6d7-4a98-c122-72d399a3e0ac"
 						}
 					],
 					"attributes": [
@@ -843,21 +847,6 @@
 						}
 					],
 					"data": []
-				},
-				{
-					"fieldNo": "150970b0-a67c-4d58-b1ff-e879abc91c91",
-					"fieldName": "multiModelArray",
-					"fieldParent": 99999,
-					"fieldType": "neptune.model",
-					"script": "",
-					"customComponent": false,
-					"bindingValue": "Generic Array",
-					"bindingType": "h",
-					"bindingSource": "P9",
-					"request": [],
-					"response": [],
-					"attributes": [],
-					"data": []
 				}
 			]
 		},
@@ -867,7 +856,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "24.07.04.1123",
+	"ver": "24.07.15.1520",
 	"application": "aws_bedrock_demo_app",
 	"title": "",
 	"description": "",
@@ -912,7 +901,7 @@
 		{
 			"id": "56e69790-f239-ef11-86c3-000d3add2e37",
 			"name": "AWS_Bedrock_Connector_API",
-			"ver": "24.07.04.1111"
+			"ver": "24.07.15.1514"
 		}
 	],
 	"package": "f250d4c6-f039-ef11-86c3-000d3add2e37"

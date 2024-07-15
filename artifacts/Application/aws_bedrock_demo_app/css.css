@@ -69,103 +69,116 @@
     padding-bottom: 20px;
 }
 
-#FlexBox2 {
+#middleBodyFlexBox {
     padding: 10px;
     margin-bottom: 8px;
 }
 
-#FlexBox1 {
+#footerFlexBox {
     margin-left: 66px;
 }
 
-#Container1 {
+#middleBodyContainer {
     border: 1px solid grey;
     border-radius: 10px;
     background: currentColor;
-    overflow: overlay;
+    overflow-y: auto;
+    overflow-x: hidden !important;
 }
 
-#Page1 {
+#pageAmazonBedrock {
     background: currentColor;
-    overflow: hidden !important;
+    // overflow: hidden !important;
+    overflow-y: scroll;
+    overflow-x:hidden !important;
 }
 
-// #Select1 .form-select {
-//     color: white !important;
-//     background-color: transparent !important;
-//     border: none !important;
-// }
-
-// #Select2 .form-select {
-//     color: white !important;
-//     background-color: transparent !important;
-//     border: none !important;
-// }
-
-#HBox {
+#hBoxDropDowns {
     margin: 10px;
     margin-left: 70px;
 }
-#HBox1 {
+
+#hBoxKeys {
     margin: 10px;
     margin-right: 70px;
 }
 
-#FlexBoxItem3 {
+#footerFlexBoxItemForRun {
     margin-left: 20px;
 }
 
 @media screen and (max-width: 500px) {
-    #FlexBox1 {
+    #footerFlexBox {
         margin-left: 12px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    #HBox {
+    #hBoxDropDowns {
         margin: 10px;
     }
 }
 
-#Select1 .form-select, #Select2 .form-select {
+#selectPlayground .form-select,
+#selectModels .form-select {
     background-color: rgb(29, 45, 62) !important;
     color: white;
     --bs-form-select-bg-img: url(https://www.iconsdb.com/icons/preview/white/arrow-204-xxl.png) !important;
 }
 
-#Select2{
+#selectModels {
     margin-left: 15px;
 }
 
-#inputAccessKey .form-control, #inputAccessSecretKey .form-control {
+#inputAccessKey .form-control,
+#inputAccessSecretKey .form-control {
     background-color: rgb(29, 45, 62) !important;
     color: white !important;
     border: none !important;
 }
-#inputAccessKey___input::placeholder, #inputAccessSecretKey___input::placeholder {
+
+#inputAccessKey___input::placeholder,
+#inputAccessSecretKey___input::placeholder {
     color: white !important;
     opacity: 0.7;
     font-size: 14px;
     font-style: italic;
 }
 
-.hboxAccessKey, .hboxSecretAccessKey {
+.hboxAccessKey,
+.hboxSecretAccessKey {
     border: 1px solid white;
     border-radius: 6px;
 }
-.errorHighlight
-{
+
+.errorHighlight {
     border: 1.5px solid rgb(255, 15, 15);
     border-radius: 6px;
     // border-radius: 6px;
 }
 
-#imgEye, #imgEye1{
+#imgEye,
+#imgEye1 {
     margin: 10px 7px 0px 0px;
 }
 
-#BusyDialog-busyInd-busy-area{
+#BusyDialog-busyInd-busy-area {
     display: table-row !important;
- 
+
 }
 
+@media screen and (max-width: 500px) {
+    #headerFlexBox {
+        width: 100% !important;
+        height: 11% !important;
+        flex-wrap: wrap !important;
+    }
+
+    #headerFlexBoxItemDropDowns {
+        width: 100% !important;
+    }
+
+    #headerFlexBoxItemKeys {
+        width: 100% !important;
+    }
+}

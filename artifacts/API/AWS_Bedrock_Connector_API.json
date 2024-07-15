@@ -55,6 +55,15 @@
 					"value": "",
 					"default": "",
 					"example": ""
+				},
+				{
+					"name": "modelProvider",
+					"description": "",
+					"required": true,
+					"inPath": false,
+					"value": "",
+					"default": "",
+					"example": ""
 				}
 			],
 			"headers": [],
@@ -92,7 +101,7 @@
 	"documentation": [],
 	"name": "AWS_Bedrock_Connector_API",
 	"endpoint": "/api/serverscript/aws_bedrock_connector_api",
-	"ver": "24.07.04.1111",
+	"ver": "24.07.15.1514",
 	"version": null,
 	"description": null,
 	"mediaType": null,
