@@ -20,7 +20,7 @@
 	"entitySets": [],
 	"apis": [],
 	"name": "AWS_Bedrock_Connector_Script",
-	"ver": "24.07.04.1116",
+	"ver": "24.07.15.1531",
 	"description": "Script to connect Neptune with AWS Bedrock",
 	"folder": "",
 	"content": "file:///content.ts",

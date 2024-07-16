@@ -7,7 +7,7 @@
 	},
 	"name": "AWS Bedrock Connector",
 	"description": "Connection between AWS Bedrock and Neptune",
-	"ver": "24.07.04.1051",
+	"ver": "24.07.15.1640",
 	"enableCICD": true,
 	"apps": [
 		{
@@ -16,7 +16,7 @@
 			"title": "",
 			"description": "",
 			"package": {
-				"id": "F250D4C6-F039-EF11-86C3-000D3ADD2E37"
+				"id": "f250d4c6-f039-ef11-86c3-000d3add2e37"
 			}
 		}
 	],
